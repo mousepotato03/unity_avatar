@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class StandardAvatar
+public class AvatarModel
 {
     // Base Info
     public float height = 180.0f;
