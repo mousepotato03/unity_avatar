@@ -15,27 +15,27 @@ public class AvatarEditor : MonoBehaviour
     public Transform leftFoot, rightFoot;
 
     // Base Info
-    [Header("General Body Info")]
+    [Header("Body Adjustment")]
     [Tooltip("키 (cm)")]
     public float height;
     [Tooltip("체중 (kg)")]
     public float weight;
 
     // Upper Body
-    [Header("Upper Body Info")]
+    [Header("")]
     public float upperBodyHeight;
     public float shoulderWidth;
-    public float chestHeight;
+    public float chestWidth;
     public float armLength;
 
     // Lower Body
-    [Header("Lower Body Info")]
+    [Header("")]
     public float lowerBodyHeight;
     public float waistWidth;
     public float hipWidth;
 
     // Foot Info
-    [Header("Foot Info")]
+    [Header("")]
     public int shoesSize;
 
     private AvatarModel avatarModel;

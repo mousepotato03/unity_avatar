@@ -10,7 +10,7 @@ public class AvatarModel
     // Upper Body
     public float upperBodyHeight = 90.0f;
     public float shoulderWidth = 45.0f;
-    public float chestHeight = 30.0f;
+    public float chestWidth = 30.0f;
     public float armLength = 60.0f;
 
     // Lower Body

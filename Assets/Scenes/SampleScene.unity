@@ -343,7 +343,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9082362208595849712, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9082362208595849712, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8711249884731782722, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8711249884731782722, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
@@ -390,6 +398,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4454556173267821136, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07231738
+      objectReference: {fileID: 0}
+    - target: {fileID: -1918406353201951979, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.07231738
+      objectReference: {fileID: 0}
+    - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000015390106
@@ -431,6 +455,18 @@ PrefabInstance:
       value: 14.918
       objectReference: {fileID: 0}
     - target: {fileID: -1285283773094673657, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1285283773094673657, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -363804881754566181, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -363804881754566181, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
@@ -462,9 +498,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.918
       objectReference: {fileID: 0}
+    - target: {fileID: 281297371296666442, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281297371296666442, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_Name
       value: Avatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017971965920130908, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017971965920130908, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510652388387417717, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510652388387417717, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1510652388387417717, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -507,6 +567,18 @@ PrefabInstance:
       value: 0.312
       objectReference: {fileID: 0}
     - target: {fileID: 2660926356113027163, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2660926356113027163, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803318976240490062, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803318976240490062, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
@@ -537,6 +609,14 @@ PrefabInstance:
     - target: {fileID: 2803318976240490062, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.312
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741763956638393273, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741763956638393273, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_Controller
@@ -652,27 +732,16 @@ MonoBehaviour:
   rightLeg: {fileID: 843906663}
   leftFoot: {fileID: 843906662}
   rightFoot: {fileID: 843906661}
-  height: 0
-  weight: 0
-  upperBodyHeight: 0
-  shoulderWidth: 0
-  chestHeight: 0
-  armLength: 0
-  lowerBodyHeight: 0
-  waistWidth: 0
-  hipWidth: 0
-  shoesSize: 0
-  standardAvatar:
-    height: 180
-    weight: 75
-    upperBodyHeight: 90
-    shoulderWidth: 45
-    chestHeight: 30
-    armLength: 60
-    lowerBodyHeight: 90
-    waistWidth: 80
-    hipWidth: 95
-    shoesSize: 280
+  height: 180
+  weight: 75
+  upperBodyHeight: 90
+  shoulderWidth: 45
+  chestWidth: 0
+  armLength: 60
+  lowerBodyHeight: 90
+  waistWidth: 80
+  hipWidth: 95
+  shoesSize: 280
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
