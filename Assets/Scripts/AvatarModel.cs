@@ -1,23 +1,26 @@
 using UnityEngine;
 
-[System.Serializable]
-public class AvatarModel
+/// <summary>
+/// 사이즈 코리아에서 제공하는 평균 사이즈를 기반으로 작성됨.
+/// <see href="https://sizekorea.kr/human-meas-search/human-data-search/meas-item">
+/// </summary>
+public static class AvatarModel
 {
     // Base Info
-    public float height = 180.0f;
-    public float weight = 75.0f;
+    public static readonly float DefaultHeight = 178.0f;
+    public static readonly float DefaultWeight = 68.0f;
 
     // Upper Body
-    public float upperBodyHeight = 90.0f;
-    public float shoulderWidth = 45.0f;
-    public float chestWidth = 30.0f;
-    public float armLength = 60.0f;
+    public static readonly float DefaultUpperBodyHeight = 67.2f;
+    public static readonly float DefaultShoulderWidth = 39.2f;
+    public static readonly float DefaultChestWidth = 32.2f;
+    public static readonly float DefaultArmLength = 58.6f;
 
     // Lower Body
-    public float lowerBodyHeight = 90.0f;
-    public float waistWidth = 80.0f;
-    public float hipWidth = 95.0f;
+    public static readonly float DefaultLowerBodyHeight = 100.9f;
+    public static readonly float DefaultWaistWidth = 25.6f; 
+    public static readonly float DefaultHipWidth = 34.0f; 
 
     // Foot Info
-    public int shoesSize = 280;
+    public static readonly int DefaultShoesSize = 270;
 }
