@@ -42,36 +42,24 @@ public class AvatarEditor : MonoBehaviour
         {
             // Scale factors
             float heightScaleFactor = CalculateScaleFactor(height, AvatarModel.DefaultHeight);
-            float weightScaleFactor = CalculateScaleFactor(weight, AvatarModel.DefaultWeight);
             float upperBodyScaleFactor = CalculateScaleFactor(upperBodyHeight, AvatarModel.DefaultUpperBodyHeight);
             float shoulderWidthScaleFactor = CalculateScaleFactor(shoulderWidth, AvatarModel.DefaultShoulderWidth);
             float armLengthScaleFactor = CalculateScaleFactor(armLength, AvatarModel.DefaultArmLength);
             float lowerBodyScaleFactor = CalculateScaleFactor(lowerBodyHeight, AvatarModel.DefaultLowerBodyHeight);
             float footScaleFactor = CalculateScaleFactor(shoesSize, AvatarModel.DefaultShoesSize);
 
-            float BIGMAC = 1.0f; //살 
+            // Determine body type info based on BMI
             BMICategory bmiCategory = BMIHelper.CalculateBMI(height, weight);
-            switch (bmiCategory)
-            {
-                case BMICategory.OverWeight:
-                    BIGMAC = 1.3f;
-                    Debug.Log("BMI Category: OverWeight");
-                    break;
-                case BMICategory.UnderWeight:
-                    BIGMAC = 0.7f;
-                    Debug.Log("BMI Category: UnderWeight");
-                    break;
-                case BMICategory.Normal:
-                    Debug.Log("BMI Category: Normal");
-                    break;
-                case BMICategory.Invalid:
-                    Debug.Log("BMI Category: Invalid");
-                    break;
-            }
-            Debug.Log($"MY BIGMAC Value : {BIGMAC}");
+            BodyTypeInfo myBodyTypeInfo = BodyTypeInfoFactory.GetBodyTypeInfo(bmiCategory);
 
-            // Spine adjustment
-            spine.localScale = new Vector3(1, upperBodyScaleFactor, BIGMAC);
+            if (myBodyTypeInfo == null)
+            {
+                Debug.LogWarning("BMI 계산에 오류가 생겨서 아바타를 변경할 수 없습니다.");
+                return;
+            }
+
+            // 상반신
+            spine.localScale = new Vector3(1, upperBodyScaleFactor, 1);
 
             // Shoulders adjustment
             leftShoulder.localPosition = new Vector3(
@@ -86,20 +74,20 @@ public class AvatarEditor : MonoBehaviour
             );
 
             // Arms adjustment
-            leftArm.localScale = new Vector3(1, armLengthScaleFactor, BIGMAC);
-            rightArm.localScale = new Vector3(1, armLengthScaleFactor, BIGMAC);
-            leftForeArm.localScale = new Vector3(1, armLengthScaleFactor, BIGMAC);
-            rightForeArm.localScale = new Vector3(1, armLengthScaleFactor, BIGMAC);
+            leftArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
+            rightArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
+            leftForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
+            rightForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
 
             // Legs adjustment
-            leftUpLeg.localScale = new Vector3(1, lowerBodyScaleFactor, BIGMAC);
-            rightUpLeg.localScale = new Vector3(1, lowerBodyScaleFactor, BIGMAC);
-            leftLeg.localScale = new Vector3(1, lowerBodyScaleFactor, BIGMAC);
-            rightLeg.localScale = new Vector3(1, lowerBodyScaleFactor, BIGMAC);
+            leftUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
+            rightUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
+            leftLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
+            rightLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
 
             // Feet adjustment
-            leftFoot.localScale = new Vector3(1, footScaleFactor, 1);
-            rightFoot.localScale = new Vector3(1, footScaleFactor, 1);
+            leftFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
+            rightFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
         }
         catch (System.NullReferenceException ex)
         {
