@@ -11,13 +11,11 @@ public static class AvatarModel
     // Upper Body
     public static readonly float DefaultUpperBodyHeight = 67.2f;
     public static readonly float DefaultShoulderWidth = 39.2f;
-    public static readonly float DefaultChestWidth = 32.2f;
     public static readonly float DefaultArmLength = 58.6f;
 
     // Lower Body
     public static readonly float DefaultLowerBodyHeight = 100.9f;
     public static readonly float DefaultWaistWidth = 25.6f; 
-    public static readonly float DefaultHipWidth = 34.0f; 
 
     // Foot Info
     public static readonly int DefaultShoesSize = 270;
@@ -25,4 +23,6 @@ public static class AvatarModel
     // Model Bone Info
     public static readonly float DefaultLShoulderXpos = -0.072f;
     public static readonly float DefaultRShoulderXpos = 0.072f;
+    public static readonly float DefaultLUpLegXpos = -0.08f;
+    public static readonly float DefaultRUpLegXpos = 0.08f;
 }
