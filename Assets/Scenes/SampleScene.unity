@@ -412,11 +412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4454556173267821136, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07231738
+      value: 0.072
       objectReference: {fileID: 0}
     - target: {fileID: -1918406353201951979, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.07231738
+      value: -0.072
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalScale.x
@@ -770,6 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6436b415c81a99e4daa59acac6b557f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  neck: {fileID: 1787154802}
   hips: {fileID: 843906674}
   spine: {fileID: 843906673}
   leftShoulder: {fileID: 843906672}
@@ -794,6 +795,11 @@ MonoBehaviour:
   waistWidth: 25.6
   hipWidth: 34
   shoesSize: 270
+--- !u!4 &1787154802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1712148502986564766, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
+  m_PrefabInstance: {fileID: 843906659}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

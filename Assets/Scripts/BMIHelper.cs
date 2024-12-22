@@ -18,8 +18,6 @@ public static class BMIHelper
 
     private static BMICategory ClassifyBMI(float bmi)
     {
-        Debug.Log($"MY bmi Value : {bmi}");
-
         if (bmi < 18.5f) return BMICategory.UnderWeight;
         if (bmi >= 18.5f && bmi < 23f) return BMICategory.Normal;
         if (bmi >= 23f) return BMICategory.OverWeight;

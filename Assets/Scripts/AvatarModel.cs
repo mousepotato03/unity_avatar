@@ -1,5 +1,3 @@
-using UnityEngine;
-
 /// <summary>
 /// 사이즈 코리아에서 제공하는 평균 사이즈를 기반으로 작성됨.
 /// <see href="https://sizekorea.kr/human-meas-search/human-data-search/meas-item">
@@ -23,4 +21,8 @@ public static class AvatarModel
 
     // Foot Info
     public static readonly int DefaultShoesSize = 270;
+
+    // Model Bone Info
+    public static readonly float DefaultLShoulderXpos = -0.072f;
+    public static readonly float DefaultRShoulderXpos = 0.072f;
 }

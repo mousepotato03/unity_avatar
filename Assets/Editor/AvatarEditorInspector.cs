@@ -15,7 +15,7 @@ public class AvatarEditorInspector : Editor
 
         // Apply 버튼 추가
         if (GUILayout.Button("Apply Avatar Changes"))
-        {   
+        {
             editor.ModifyAvatar();
             Debug.Log("Avatar has been modified.");
         }

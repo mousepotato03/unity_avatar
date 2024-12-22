@@ -5,6 +5,7 @@ public class AvatarEditor : MonoBehaviour
 {
     [Header("Body Transforms")]
     [Tooltip("키 조절할 때 사용함.")]
+    public Transform neck;
     public Transform hips;
     [Tooltip("상체 총장 조절할 때 사용함. 단, 허리 위로 모든 부분이 조절됨.")]
     public Transform spine;
@@ -58,36 +59,45 @@ public class AvatarEditor : MonoBehaviour
                 return;
             }
 
-            // 상반신
+            // 상반신 조절
             spine.localScale = new Vector3(1, upperBodyScaleFactor, 1);
+            // 하위 스케일 롤백
+            neck.localScale = new Vector3(1,1/upperBodyScaleFactor,1);
+            leftArm.localScale = new Vector3(1,1/upperBodyScaleFactor,1);
+            rightArm.localScale = new Vector3(1,1/upperBodyScaleFactor,1);
 
+        Debug.Log($"이전 어깨: {rightShoulder.localPosition.x}, 바뀌 어깨:{AvatarModel.DefaultRShoulderXpos * shoulderWidthScaleFactor}");
             // Shoulders adjustment
             leftShoulder.localPosition = new Vector3(
-                -Mathf.Abs(leftShoulder.localPosition.x) * shoulderWidthScaleFactor,
+                AvatarModel.DefaultLShoulderXpos * shoulderWidthScaleFactor,
                 leftShoulder.localPosition.y,
                 leftShoulder.localPosition.z
             );
             rightShoulder.localPosition = new Vector3(
-                Mathf.Abs(rightShoulder.localPosition.x) * shoulderWidthScaleFactor,
+                AvatarModel.DefaultRShoulderXpos * shoulderWidthScaleFactor,
                 rightShoulder.localPosition.y,
                 rightShoulder.localPosition.z
             );
+            
 
-            // Arms adjustment
-            leftArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
-            rightArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
-            leftForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
-            rightForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
 
-            // Legs adjustment
-            leftUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
-            rightUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
-            leftLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
-            rightLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
+            // // Arms adjustment
+            // leftArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
+            // rightArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ArmThickness);
+            // leftForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
+            // rightForeArm.localScale = new Vector3(1, armLengthScaleFactor, myBodyTypeInfo.ForeArmThickness);
 
-            // Feet adjustment
-            leftFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
-            rightFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
+            // // Legs adjustment
+            // leftUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
+            // rightUpLeg.localScale = new Vector3(myBodyTypeInfo.UpLegWidth, lowerBodyScaleFactor, myBodyTypeInfo.UpLegThickness);
+            // leftLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
+            // rightLeg.localScale = new Vector3(myBodyTypeInfo.LegWidth, lowerBodyScaleFactor, myBodyTypeInfo.LegThickness);
+
+            // // Feet adjustment
+            // leftFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
+            // rightFoot.localScale = new Vector3(myBodyTypeInfo.FootWidth, footScaleFactor, myBodyTypeInfo.FootThickness);
+
+            // Debug.Log($"Input Arm Value: {armLength}, Origin Value:{AvatarModel.ArmLength}");
         }
         catch (System.NullReferenceException ex)
         {
