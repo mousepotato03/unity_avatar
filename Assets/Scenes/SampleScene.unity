@@ -584,43 +584,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000015390106
+      value: 0.00000092899427
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13005994
+      value: 0.13006386
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00000037252903
+      value: 0.0000013969839
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8223531
+      value: 0.8444243
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.56650627
+      value: 0.53413063
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0066243
+      value: -0.00015594433
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.052556515
+      value: 0.040646177
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 68.598
+      value: 64.433
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 11.13
+      value: 5.739
       objectReference: {fileID: 0}
     - target: {fileID: -1680883931492820501, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 14.918
+      value: 9.13
       objectReference: {fileID: 0}
     - target: {fileID: -1285283773094673657, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1048,6 +1048,9 @@ MonoBehaviour:
   lowerBodyHeight: 100.9
   waistWidth: 25.6
   shoesSize: 270
+  tshirtMesh: {fileID: 4432980670520643969}
+  pantsMesh: {fileID: 1096435319556363915}
+  shoesMesh: {fileID: 274217184271834349}
 --- !u!4 &1329191063 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4425252173966862258, guid: 079cf994373b8674ea85d469c13a0c2c, type: 3}
@@ -1131,7 +1134,7 @@ GameObject:
   - component: {fileID: 8098473809355873384}
   - component: {fileID: 3204766744013463317}
   m_Layer: 0
-  m_Name: Shoe
+  m_Name: Shoes:mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1227,7 +1230,7 @@ GameObject:
   - component: {fileID: 4196260020024285325}
   - component: {fileID: 5544297881004426113}
   m_Layer: 0
-  m_Name: DG100110
+  m_Name: Pants:mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
