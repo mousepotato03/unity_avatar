@@ -37,22 +37,54 @@ public class AvatarEditor : MonoBehaviour
     public GameObject pantsMesh;
     public GameObject shoesMesh;
 
-    /// <summary>
-    /// Flutter에서 전달받은 내용을 변수에 저장한 후, ModifyAvatar를 실행하면 아바타가 사이즈에 맞게 수정됨.
-    /// </summary>
-
-    public void UpdateBodyParameters(float newHeight, float newWeight, float newUpperBodyHeight, float newShoulderWidth, float newArmLength, float newLowerBodyHeight, float newWaistWidth, int newShoesSize)
+    public void ApplyBodyParameters(string jsonData)
     {
-        height = newHeight;
-        weight = newWeight;
-        upperBodyHeight = newUpperBodyHeight;
-        shoulderWidth = newShoulderWidth;
-        armLength = newArmLength;
-        lowerBodyHeight = newLowerBodyHeight;
-        waistWidth = newWaistWidth;
-        shoesSize = newShoesSize;
+        try
+        {
+            // JSON 데이터를 BodyParameters 객체로 파싱
+            var bodyParameters = JsonConvert.DeserializeObject<Dictionary<string, float>>(jsonData);
 
-        ModifyAvatar();
+            // 각 파라미터 업데이트
+            if (bodyParameters.ContainsKey("height"))
+            {
+                height = bodyParameters["height"];
+            }
+            if (bodyParameters.ContainsKey("weight"))
+            {
+                weight = bodyParameters["weight"];
+            }
+            if (bodyParameters.ContainsKey("upperBodyHeight"))
+            {
+                upperBodyHeight = bodyParameters["upperBodyHeight"];
+            }
+            if (bodyParameters.ContainsKey("shoulderWidth"))
+            {
+                shoulderWidth = bodyParameters["shoulderWidth"];
+            }
+            if (bodyParameters.ContainsKey("armLength"))
+            {
+                armLength = bodyParameters["armLength"];
+            }
+            if (bodyParameters.ContainsKey("lowerBodyHeight"))
+            {
+                lowerBodyHeight = bodyParameters["lowerBodyHeight"];
+            }
+            if (bodyParameters.ContainsKey("waistWidth"))
+            {
+                waistWidth = bodyParameters["waistWidth"];
+            }
+            if (bodyParameters.ContainsKey("shoesSize"))
+            {
+                shoesSize = (int)bodyParameters["shoesSize"];
+            }
+
+            // 아바타 수정 적용
+            ModifyAvatar();
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Error in UpdateBodyParameters: {ex.Message}");
+        }
     }
 
     private float CalculateScaleFactor(float inputValue, float standardValue)
